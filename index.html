@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Change Background Color</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fff;
+            transition: background-color 0.5s ease;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .red { background-color: #f44336; color: white; }
+        .blue { background-color: #2196F3; color: white; }
+        .green { background-color: #4CAF50; color: white; }
+        .yellow { background-color: #FFEB3B; color: black; }
+        .purple { background-color: #9C27B0; color: white; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Click a Button to Change Background Color</h1>
+        <div class="buttons">
+            <button class="red" onclick="changeBackgroundColor('red')">Red</button>
+            <button class="blue" onclick="changeBackgroundColor('blue')">Blue</button>
+            <button class="green" onclick="changeBackgroundColor('green')">Green</button>
+            <button class="yellow" onclick="changeBackgroundColor('yellow')">Yellow</button>
+            <button class="purple" onclick="changeBackgroundColor('purple')">Purple</button>
+        </div>
+    </div>
+
+    <script>
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+
+</body>
+</html>
